@@ -1,5 +1,10 @@
 import random
 def get_numbers_ticket(min, max, quantity):
+    lottery_numbers = []
+    if max - min  < quantity:
+       print(f"Між числами {min} i {max} неможливо вибрати {quantity} значень.")
+       return lottery_numbers
+     
     lottery_numbers_s = set()
     a = set()
     
@@ -15,5 +20,5 @@ def get_numbers_ticket(min, max, quantity):
     #lottery_numbers.sort()    
     return lottery_numbers
 
-lottery_numbers = get_numbers_ticket(1, 49, 6)
+lottery_numbers = get_numbers_ticket(10, 14, 6)
 print("Ваші лотерейні чиsсла:", lottery_numbers)
