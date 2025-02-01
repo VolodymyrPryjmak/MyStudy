@@ -4,7 +4,7 @@ def get_numbers_ticket(min, max, quantity):
     if max - min  < quantity:
        print(f"Між числами {min} i {max} неможливо вибрати {quantity} значень.") 
        return lottery_numbers
-    elif (max >= 1000)  or (min  <=1 ):   
+    elif (max > 1000)  or (min  <1 ):   
        print(f" Числа {min} , {max} за межами дозволених значень.")
        return lottery_numbers
     else:
